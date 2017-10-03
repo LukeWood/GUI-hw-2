@@ -106,11 +106,11 @@ window.onload = function () {
       bindTable(lists.fall,   controls.fallRegistrationTableBody,   controls.noFallRegistrationMessage);
       bindTable(lists.spring, controls.springRegistrationTableBody, controls.noSpringRegistrationMessage);
     },
-    onSemeseterChange: () => { // this method needs to be called from html at the appropriate time. Don't forget "events."
+    onSemesterChange: () => { // this method needs to be called from html at the appropriate time. Don't forget "events."
       var result = '<option></option>'; // this ensures empty default option
 
       courseCatalog.forEach((c, i) => {
-        result += `<option value="${i}">${c.number} - ${c.name}</option>`;
+        result += `<option value="${i}">${c.number} - ${c.title}</option>`;
         // c = course, i = index
         // use string interpolation to add course option to result string
         // format: <option value="0">CSE3345 - GRAPHICAL USER INTERFACE DESIGN AND IMPLEMENTATION</option>
@@ -167,5 +167,6 @@ window.onload = function () {
     }
   };
   events.onRegistrationChange();
+  events.onSemesterChange();
   // call event.onRegistrationChange to do initial binding, showing and hiding
 };

@@ -121,14 +121,17 @@
           </div>
           <div class="modal-body">
             <div class="form-group">
-              <label for="semesterField">Semester</label>
-              <input id="semesterField" type="select"></input>
+              <label class="form-check-label" for="semesterField">Semester</label>
+              <select class="custom-select" onchange="events.onSemesterChange()" id="semesterField">
+                <option value="0">Fall 2017</option>
+                <option value="1">Spring 2018</option>
+              </select>
 
-              <label for="courseField">Course</label>
-              <input id="courseField" type="select"></input>
+              <label class="form-check-label" for="courseField">Course</label>
+              <select class="custom-select" onchange="events.onCourseChange()" id="courseField"></select>
 
-              <label for="sectionField">Section</label>
-              <input id="sectionField" type="select"></input>
+              <label class="form-check-label" for="sectionField">Section</label>
+              <select class="custom-select" id="sectionField"></select>
             </div>
           </div>
           <div class="modal-footer">
@@ -138,6 +141,7 @@
         </div>
       </div>
     </div>
+
     <!-- Browse the components and utilities sections under documentation at http://getbootstrap.com/.
     There, you will find the modal, tabs, navigation bar, side panel and other features shown in the video.
     See my pointers in red in the attached screenshots.
