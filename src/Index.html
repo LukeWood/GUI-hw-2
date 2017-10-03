@@ -50,7 +50,7 @@
        <button type="button" class="btn btn-success">Add Course</button>
      </div>
      <div class="col col-lg-2">
-       <div class="card" id="catalogCard">
+       <div class="card">
          <img class="card-img-top" src="/img/smu.jpg" alt="Southern Methodist University">
          <div class="card-block">
            <h4 class="card-title">Course Catalog</h4>
@@ -63,12 +63,12 @@
 
 
     <div class="container">
-      <ul id="semesterMenu" class="nav">
+      <ul id="semesterMenu" class="nav nav-tabs" data-toggle="tabs">
         <li>
-          <a href="#fall" class="nav-link">Fall 2017</a>
+          <a href="#fall" data-toggle="tabs" class="nav-link">Fall 2017</a>
         </li>
         <li>
-          <a href="#spring" class="nav-link">Spring 2018</a>
+          <a href="#spring" data-toggle="tabs" class="nav-link">Spring 2018</a>
         </li>
       </ul>
 
@@ -78,8 +78,8 @@
           <div id="fallMessage" class="alert alert-info" role="alert">
             You have not registered for <strong>Fall 2017</strong>.  Click 'Add Course' to complete registration.
           </div>
-          <table class=".table">
-            <thead>
+          <table class="table table-bordered">
+            <thead class="thead">
               <td>Course</td>
               <td>Title</td>
               <td>Section</td>
@@ -90,10 +90,10 @@
             <tbody id="fallTable"></tbody>
           </table>
         </div>
-        <div id="spring">
+        <div id="spring" class="tab-pane">
           <h1>Spring 2018</h1>
-          <table class=".table">
-            <thead>
+          <table class="table table-bordered">
+            <thead class="thead">
               <td>Course</td>
               <td>Title</td>
               <td>Section</td>
@@ -102,7 +102,6 @@
               <td>Location</td>
             </thead>
             <tbody id="springTable"></tbody>
-
           </table>
           <div id="springMessage" class="alert alert-info" role="alert">
             You have not registered for <strong>Spring 2018</strong>.  Click 'Add Course' to complete registration.
@@ -117,7 +116,7 @@
     See my pointers in red in the attached screenshots.
     Please note that my CSS file only contained 5-6 style definitions.
     The rest was all made possible by Bootstrap! -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
 </body>
 
 </html>

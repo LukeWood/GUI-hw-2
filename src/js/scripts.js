@@ -143,7 +143,8 @@ window.onload = function () {
       var section = undefined; // instead of undefined, use sectionIndex to assign to the right section in the course.sections array
 
       var registration = new Registration(); // populate arguments of contructor from course and section
-
+      switch (semesterIndex) {
+      }
       // switch on semesterIndex
       // if 0, add registation to lists.fall
       // if 1, add registation to lists.spring
