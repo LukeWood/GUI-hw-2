@@ -124,9 +124,9 @@ window.onload = function () {
 
       var courseIndex = +controls.courseField.val();
       var course = courseCatalog[courseIndex]; // instead of undefined, use courseIndex to assign to the right course in the courseCatalog array
-
+      console.log(course);
       course.sections.forEach((s, i) => {
-        result+=`<option value="${i}>${s.schedule} (${s.instructor})</option>"`;
+        result+=`<option value="${i}">${s.schedule} (${s.instructor})</option>`;
         // s = section, i = index
         // use string interpolation to add section option to result string
         // format: <option value="0">TuTh 11:00AM - 12:20PM (Steve Labova)</option>
@@ -142,7 +142,8 @@ window.onload = function () {
 
       var course = courseCatalog[courseIndex]; // instead of undefined, use courseIndex to assign to the right course in the courseCatalog array
       var section = course.sections[sectionIndex]; // instead of undefined, use sectionIndex to assign to the right section in the course.sections array
-
+      console.log(course);
+      console.log(sectionIndex);
       //course, title, section, instructor, schedule, location
       var registration = new Registration(course, course.title, section, course.instructor, section.schedule, section.location);
 
