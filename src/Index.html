@@ -5,19 +5,90 @@
 
 <head>
     <title>Homework #2</title>
-    <!-- Add your viewport meta tag -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Go to http://getbootstrap.com/ and scroll down to Bootstrap CDN. Add CSS reference here. -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="/js/scripts.js"></script>
+    <link rel="stylesheet" href="/css/styles.css">
 
-    <!-- You will want to have a local style.css to override and customize styles -->
-
-    <!-- Add Boostrap's CDN JS references here. -->
-
-    <!-- Don't forget your local scripts.js file. There is much code already written for you. -->
 </head>
 
 <body class="container">
-    <!-- Browse the components and utilities sections under documentation at http://getbootstrap.com/. There, you will find the modal, tabs, navigation bar, side panel and other features shown in the video. See my pointers in red in the attached screenshots. Please note that my CSS file only contained 5-6 style definitions. The rest was all made possible by Bootstrap! -->
+
+    <!-- As a heading -->
+    <nav class="navbar navbar-light justify-content-between">
+      <img class="img-fluid" alt="Lyle Logo" src="/img/LogoLyle.png">
+      <ul class="nav">
+        <li class="active nav-item">
+          <a href="#" data-toggle="pill" class="nav-link">Schedule</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" data-toggle="pill" class="nav-link">Grades</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" data-toggle="pill" class="nav-link">Faculty</a>
+        </li>
+        <li class="nav-item dropdown">
+               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                 My Account
+               </a>
+               <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                 <a class="dropdown-item" href="#">Action</a>
+                 <a class="dropdown-item" href="#">Another action</a>
+                 <a class="dropdown-item" href="#">Something else here</a>
+               </div>
+             </li>
+      </ul>
+    </nav>
+
+    <h1 class="display-5">Schedule</h1>
+
+    <button type="button" class="btn btn-success">Add Course</button>
+
+    <div class="container">
+      <ul id="semesterMenu" class="nav">
+        <li>
+          <a href="#fall" class="nav-link">Fall 2017</a>
+        </li>
+        <li>
+          <a href="#spring" class="nav-link">Spring 2018</a>
+        </li>
+      </ul>
+
+      <div id="tab-cont" class="tab-content">
+        <div id="fall" class="tab-pane">
+          <h1>Fall 2017</h1>
+          <div id="fallMessage" class="alert alert-info" role="alert">
+            You have not registered for <strong>Fall 2017</strong>.  Click 'Add Course' to complete registration.
+          </div>
+          <table class=".table" id="fallTable"></table>
+        </div>
+        <div id="spring" class="tab-pane">
+          <h1>Spring 2018</h1>
+          <table class=".table" id="springTable"></table>
+          <div id="springMessage" class="alert alert-info" role="alert">
+            You have not registered for <strong>Spring 2018</strong>.  Click 'Add Course' to complete registration.
+          </div>
+        </div>
+      </div>
+
+      <div class="card" style="width: 20rem;">
+        <img class="card-img-top" src="img/LogoLyle.png" alt="Southern Methodist University">
+        <div class="card-block">
+          <h4 class="card-title">Card title</h4>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+    </div>
+    <!-- Browse the components and utilities sections under documentation at http://getbootstrap.com/.
+    There, you will find the modal, tabs, navigation bar, side panel and other features shown in the video.
+    See my pointers in red in the attached screenshots.
+    Please note that my CSS file only contained 5-6 style definitions.
+    The rest was all made possible by Bootstrap! -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </body>
 
 </html>

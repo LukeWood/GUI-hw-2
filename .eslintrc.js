@@ -22,6 +22,7 @@ module.exports = {
       'no-trailing-spaces': [2],
   },
   'globals': {
+      '$': true,
       'Persons': true,
       'Modules': true,
       'lodash': true,

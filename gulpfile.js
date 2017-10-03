@@ -58,7 +58,7 @@ gulp.task('html', function() {
 // Gulp task to concatenate our css files
 gulp.task('css', function () {
    gulp.src(configuration.paths.src.css)
-       .pipe(concat('homepage.css'))
+       .pipe(concat('styles.css'))
        .pipe(gulp.dest(configuration.paths.dist + '/css'))
        .pipe(connect.reload());
 });

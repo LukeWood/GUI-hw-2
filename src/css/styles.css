@@ -1,0 +1,7 @@
+.navbar {
+  background-color: rgb(53, 76, 161);
+}
+
+.navbar>.nav>li>a {
+  color: white;
+}
