@@ -135,16 +135,25 @@ window.onload = function () {
       // set result to controls.sectionField.html
     },
     onAddCourseClick: () => { // this method needs to be called from html at the appropriate time. Don't forget "events."
-      var semesterIndex = undefined; // instead of undefined, retreive val from controls.semesterField (use + to convert string to number)
-      var courseIndex = undefined; // instead of undefined, retreive val from controls.courseField (use + to convert string to number)
-      var sectionIndex = undefined; // instead of undefined, retreive val from controls.sectionField (use + to convert string to number)
+      var semesterIndex = +controls.semesterField.val(); // instead of undefined, retreive val from controls.semesterField (use + to convert string to number)
+      var courseIndex = +controls.courseField.val(); // instead of undefined, retreive val from controls.courseField (use + to convert string to number)
+      var sectionIndex = +controls.sectionField.val(); // instead of undefined, retreive val from controls.sectionField (use + to convert string to number)
 
-      var course = undefined; // instead of undefined, use courseIndex to assign to the right course in the courseCatalog array
-      var section = undefined; // instead of undefined, use sectionIndex to assign to the right section in the course.sections array
+      var course = courseCatalog[courseIndex]; // instead of undefined, use courseIndex to assign to the right course in the courseCatalog array
+      var section = course.sections[sectionIndex]; // instead of undefined, use sectionIndex to assign to the right section in the course.sections array
 
-      var registration = new Registration(); // populate arguments of contructor from course and section
+      //course, title, section, instructor, schedule, location
+      var registration = new Registration(course, course.title, section, course.instructor, section.schedule, section.location);
+      
       switch (semesterIndex) {
+      case 0:
+        lists.fall.push(registration);
+        break;
+      case 1:
+        lists.spring.push(registration);
+        break;
       }
+      event.onRegistrationChange();
       // switch on semesterIndex
       // if 0, add registation to lists.fall
       // if 1, add registation to lists.spring
