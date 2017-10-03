@@ -5,3 +5,7 @@
 .navbar>.nav>li>a {
   color: white;
 }
+
+#catalogCard {
+  width: 20rem;
+}

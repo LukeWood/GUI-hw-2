@@ -35,17 +35,32 @@
                  My Account
                </a>
                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                 <a class="dropdown-item" href="#">Action</a>
-                 <a class="dropdown-item" href="#">Another action</a>
-                 <a class="dropdown-item" href="#">Something else here</a>
+                 <a class="dropdown-item" href="#">Update Profile</a>
+                 <a class="dropdown-item" href="#">Change Password</a>
+                 <a class="dropdown-item" href="#">Logout</a>
                </div>
              </li>
       </ul>
     </nav>
+    <div class="row justify-content-md-center">
+     <div class="col col-lg-2">
+       <h1 class="display-5">Schedule</h1>
+     </div>
+     <div class="col-12 col-md-auto">
+       <button type="button" class="btn btn-success">Add Course</button>
+     </div>
+     <div class="col col-lg-2">
+       <div class="card" id="catalogCard">
+         <img class="card-img-top" src="/img/smu.jpg" alt="Southern Methodist University">
+         <div class="card-block">
+           <h4 class="card-title">Course Catalog</h4>
+           <p class="card-text">Click below to view the full undergraduate course catalog.</p>
+           <a href="#" class="btn btn-primary">View Catalog</a>
+         </div>
+       </div>
+      </div>
+   </div>
 
-    <h1 class="display-5">Schedule</h1>
-
-    <button type="button" class="btn btn-success">Add Course</button>
 
     <div class="container">
       <ul id="semesterMenu" class="nav">
@@ -58,31 +73,45 @@
       </ul>
 
       <div id="tab-cont" class="tab-content">
-        <div id="fall" class="tab-pane">
+        <div id="fall" class="tab-pane active">
           <h1>Fall 2017</h1>
           <div id="fallMessage" class="alert alert-info" role="alert">
             You have not registered for <strong>Fall 2017</strong>.  Click 'Add Course' to complete registration.
           </div>
-          <table class=".table" id="fallTable"></table>
+          <table class=".table">
+            <thead>
+              <td>Course</td>
+              <td>Title</td>
+              <td>Section</td>
+              <td>Schedule</td>
+              <td>Instructor</td>
+              <td>Location</td>
+            </thead>
+            <tbody id="fallTable"></tbody>
+          </table>
         </div>
-        <div id="spring" class="tab-pane">
+        <div id="spring">
           <h1>Spring 2018</h1>
-          <table class=".table" id="springTable"></table>
+          <table class=".table">
+            <thead>
+              <td>Course</td>
+              <td>Title</td>
+              <td>Section</td>
+              <td>Schedule</td>
+              <td>Instructor</td>
+              <td>Location</td>
+            </thead>
+            <tbody id="springTable"></tbody>
+
+          </table>
           <div id="springMessage" class="alert alert-info" role="alert">
             You have not registered for <strong>Spring 2018</strong>.  Click 'Add Course' to complete registration.
           </div>
         </div>
       </div>
 
-      <div class="card" style="width: 20rem;">
-        <img class="card-img-top" src="img/LogoLyle.png" alt="Southern Methodist University">
-        <div class="card-block">
-          <h4 class="card-title">Card title</h4>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-      </div>
     </div>
+
     <!-- Browse the components and utilities sections under documentation at http://getbootstrap.com/.
     There, you will find the modal, tabs, navigation bar, side panel and other features shown in the video.
     See my pointers in red in the attached screenshots.
