@@ -13,3 +13,7 @@
 #first-row {
   margin: 2rem;
 }
+
+.custom-select {
+  width: 100%;
+}

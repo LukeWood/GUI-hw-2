@@ -90,7 +90,7 @@ window.onload = function () {
 
         list.forEach(registration => {
           result+= `<tr>
-            <td>${registration.number}</td>
+            <td>${registration.course}</td>
             <td>${registration.title}</td>
             <td>${registration.section}</td>
             <td>${registration.schedule}</td>
@@ -150,7 +150,7 @@ window.onload = function () {
       var course = courseCatalog[courseIndex]; // instead of undefined, use courseIndex to assign to the right course in the courseCatalog array
       var section = course.sections[sectionIndex]; // instead of undefined, use sectionIndex to assign to the right section in the course.sections array
       //course, title, section, instructor, schedule, location
-      var registration = new Registration(course, course.title, section.number, section.instructor, section.schedule, section.location);
+      var registration = new Registration(course.number, course.title, section.number, section.instructor, section.schedule, section.location);
 
       switch (semesterIndex) {
       case 0:
