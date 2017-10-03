@@ -73,9 +73,9 @@ window.onload = function () {
     springRegistrationTableBody: $('#springTable'), // apply selector for spring registation table body
     noFallRegistrationMessage: $('#fallMessage'), // apply selector for no fall registation message
     noSpringRegistrationMessage: $('#springMessage'), // apply selector for no spring registation message
-    semesterField: $('XXX'), // apply selector for semester field (select)
-    courseField: $('XXX'), // apply selector for course field (select)
-    sectionField: $('XXX') // apply selector for section field (select)
+    semesterField: $('#semesterField'), // apply selector for semester field (select)
+    courseField: $('#courseField'), // apply selector for course field (select)
+    sectionField: $('#sectionField') // apply selector for section field (select)
   };
 
   lists = {
@@ -110,28 +110,29 @@ window.onload = function () {
       var result = '<option></option>'; // this ensures empty default option
 
       courseCatalog.forEach((c, i) => {
-        let template = '<option value="${i}">${c.number} - ${c.name}</option>';
+        result += `<option value="${i}">${c.number} - ${c.name}</option>`;
         // c = course, i = index
         // use string interpolation to add course option to result string
         // format: <option value="0">CSE3345 - GRAPHICAL USER INTERFACE DESIGN AND IMPLEMENTATION</option>
         // (0 = i)
       });
-
+      controls.courseField.html(result);
       // set result to controls.courseField.html
     },
     onCourseChange: () => { // this method needs to be called from html at the appropriate time. Don't forget "events."
       var result = '<option></option>'; // this ensures empty default option
 
       var courseIndex = +controls.courseField.val();
-      var course = undefined; // instead of undefined, use courseIndex to assign to the right course in the courseCatalog array
+      var course = courseCatalog[courseIndex]; // instead of undefined, use courseIndex to assign to the right course in the courseCatalog array
 
       course.sections.forEach((s, i) => {
+        result+=`<option value="${i}>${s.schedule} (${s.instructor})</option>"`;
         // s = section, i = index
         // use string interpolation to add section option to result string
         // format: <option value="0">TuTh 11:00AM - 12:20PM (Steve Labova)</option>
         // (0 = i)
       });
-
+      controls.sectionField.html(result);
       // set result to controls.sectionField.html
     },
     onAddCourseClick: () => { // this method needs to be called from html at the appropriate time. Don't forget "events."
@@ -144,7 +145,7 @@ window.onload = function () {
 
       //course, title, section, instructor, schedule, location
       var registration = new Registration(course, course.title, section, course.instructor, section.schedule, section.location);
-      
+
       switch (semesterIndex) {
       case 0:
         lists.fall.push(registration);
@@ -153,7 +154,8 @@ window.onload = function () {
         lists.spring.push(registration);
         break;
       }
-      event.onRegistrationChange();
+
+      events.onRegistrationChange();
       // switch on semesterIndex
       // if 0, add registation to lists.fall
       // if 1, add registation to lists.spring
