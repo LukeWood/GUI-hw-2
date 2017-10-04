@@ -89,7 +89,7 @@ window.onload = function () {
         var result = '';
 
         list.forEach(registration => {
-          result+= `<tr>
+          result+= `<tr scope="row">
             <td>${registration.course}</td>
             <td>${registration.title}</td>
             <td>${registration.section}</td>

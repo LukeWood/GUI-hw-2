@@ -8,12 +8,30 @@
 
 #catalogCard {
   width: 20rem;
+  padding: 2rem;
+  text-align: center;
+  float: right;
 }
 
 #first-row {
-  margin: 2rem;
+  width: 100%;
+  display: inline;
 }
 
 .custom-select {
   width: 100%;
+}
+
+#scheduleDiv {
+  float:left;
+}
+
+#addButton {
+  display: inline;
+  float: right;
+}
+
+#scheduleTitle {
+  display: inline;
+  margin: 3rem;
 }
