@@ -13,17 +13,15 @@
   float: right;
 }
 
-#first-row {
-  width: 100%;
-  display: inline;
-}
-
 .custom-select {
   width: 100%;
 }
 
 #scheduleDiv {
+  padding-top: 3rem;
   float:left;
+  width: auto;
+  max-width: 65%;
 }
 
 #addButton {
@@ -34,4 +32,8 @@
 #scheduleTitle {
   display: inline;
   margin: 3rem;
+}
+
+#semesterMenu {
+  margin-top: 1.5rem;
 }

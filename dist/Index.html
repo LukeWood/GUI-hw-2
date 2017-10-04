@@ -52,11 +52,11 @@
       </div>
     </div>
 
-    <div id="first-row">
-     <h1 id="scheduleTitle" class="display-5">Schedule</h1>
-     <button id="addButton" type="button" class="btn btn-success" data-target="#courseSignup" data-toggle="modal">Add Course</button>
 
-      <div id="scheduleDiv" class="container">
+    <div id="scheduleDiv" class="container">
+      <h1 id="scheduleTitle" class="display-5">Schedule</h1>
+      <button id="addButton" type="button" class="btn btn-success" data-target="#courseSignup" data-toggle="modal">Add Course</button>
+
         <ul id="semesterMenu" class="nav nav-tabs" data-target="tab-cont" data-toggle="tabs">
           <li>
             <a href="#fall" data-toggle="tab" class="nav-link active">Fall 2017</a>
@@ -66,43 +66,41 @@
           </li>
         </ul>
 
-        <div id="tab-cont" class="tab-content">
-          <div id="fall" class="tab-pane active">
-            <h1>Fall 2017</h1>
-            <div id="fallMessage" class="alert alert-info" role="alert">
-              You have not registered for <strong>Fall 2017</strong>.  Click 'Add Course' to complete registration.
-            </div>
-            <table class="table table-bordered table-striped">
-              <thead class="thead">
-                <td>Course</td>
-                <td>Title</td>
-                <td>Section</td>
-                <td>Schedule</td>
-                <td>Instructor</td>
-                <td>Location</td>
-              </thead>
-              <tbody id="fallTable"></tbody>
-            </table>
+      <div id="tab-cont" class="tab-content">
+        <div id="fall" class="tab-pane active">
+          <h1>Fall 2017</h1>
+          <div id="fallMessage" class="alert alert-info" role="alert">
+            You have not registered for <strong>Fall 2017</strong>.  Click 'Add Course' to complete registration.
           </div>
-          <div id="spring" class="tab-pane">
-            <h1>Spring 2018</h1>
-            <table class="table table-bordered table-striped">
-              <thead class="thead">
-                <td>Course</td>
-                <td>Title</td>
-                <td>Section</td>
-                <td>Schedule</td>
-                <td>Instructor</td>
-                <td>Location</td>
-              </thead>
-              <tbody id="springTable"></tbody>
-            </table>
-            <div id="springMessage" class="alert alert-info" role="alert">
-              You have not registered for <strong>Spring 2018</strong>.  Click 'Add Course' to complete registration.
-            </div>
+          <table class="table table-bordered table-striped">
+            <thead class="thead">
+              <td>Course</td>
+              <td>Title</td>
+              <td>Section</td>
+              <td>Schedule</td>
+              <td>Instructor</td>
+              <td>Location</td>
+            </thead>
+            <tbody id="fallTable"></tbody>
+          </table>
+        </div>
+        <div id="spring" class="tab-pane">
+          <h1>Spring 2018</h1>
+          <table class="table table-bordered table-striped">
+            <thead class="thead">
+              <td>Course</td>
+              <td>Title</td>
+              <td>Section</td>
+              <td>Schedule</td>
+              <td>Instructor</td>
+              <td>Location</td>
+            </thead>
+            <tbody id="springTable"></tbody>
+          </table>
+          <div id="springMessage" class="alert alert-info" role="alert">
+            You have not registered for <strong>Spring 2018</strong>.  Click 'Add Course' to complete registration.
           </div>
         </div>
-
       </div>
     </div>
 
